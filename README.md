@@ -27,6 +27,33 @@ Evaluar el comportamiento de los clientes de **ConnectaTel** en Latinoamérica h
 
 ---
 
+## ✅ Correcciones aplicadas
+- Filtro de usuarios → ahora incluye todos los registros hasta 2024 (no solo los de 2024).  
+- Fechas futuras → se marcan como nulas con límite fijo (2024-12-31).  
+- IQR → corregido a percentiles 25 y 75.  
+- Categorías de uso → estandarizadas a `'call'` y `'text'`.  
+- Conteos y placeholders → corregidos (users = 4000 filas, no 40,000).  
+
+---
+
+## 📊 Resultados principales
+- **Usuarios válidos:** 3960 hasta 2024.  
+- **Edad mediana:** 48 años.  
+- **Planes:** 65% Básico, 35% Premium.  
+- **Mensajes promedio:** 5.5 por usuario.  
+- **Llamadas promedio:** 4.5 por usuario, con duración media de 23 minutos.  
+- **Ciudades clave:** Bogotá y CDMX concentran la mayor base de clientes.  
+- **Outliers:** heavy users detectados con IQR correcto, se mantienen como casos reales.
+
+---
+
+## 📑 Resumen ejecutivo
+El análisis de ConnectaTel muestra que la mayoría de los clientes pertenecen al plan Básico (65%), con una edad mediana de 48 años. Los usuarios Premium presentan mayor intensidad de uso, enviando más mensajes y acumulando más minutos de llamadas. Bogotá y CDMX concentran la mayor proporción de clientes, lo que sugiere oportunidades de segmentación regional.  
+La corrección de fechas y sentinels asegura que el análisis se limite al periodo válido (2022–2024), evitando sesgos. Los heavy users identificados son un segmento valioso para estrategias de fidelización.  
+En conclusión, el estudio refleja fielmente el comportamiento de toda la base de clientes hasta 2024, permitiendo diseñar estrategias de retención y optimización de planes basadas en datos completos y consistentes.
+
+---
+
 ## ⚙️ Cómo ejecutar el notebook
 1. Abre [Google Colab](https://colab.research.google.com/).  
 2. Sube el archivo del notebook (`ConnectaTel.ipynb`).  
@@ -40,3 +67,4 @@ Evaluar el comportamiento de los clientes de **ConnectaTel** en Latinoamérica h
 - **Pasos básicos:**
   ```bash
   pip install pandas numpy matplotlib seaborn
+  
